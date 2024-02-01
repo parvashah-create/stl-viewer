@@ -4,3 +4,5 @@ brodicaDonjaStrana.stl
 PropelaBlag.stl
 VAWT_Lopatica.stl
 ZubcastaPumpa_Zubcanik.stl
+10_mm_cube_1.stl
+10_mm_cube.stl

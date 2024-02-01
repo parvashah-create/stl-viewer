@@ -22,20 +22,6 @@
     {% endblock %}
   </head>
   <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="/"><i class="fas fa-cube"></i>STL Viewer</a>
-            </div>  
-            <div class="menu">
-                <a href="/"><i class="fas fa-home"></i> Home</a>
-                <a href="/models"><i class="fas fa-cubes"></i> Models</a>
-                <a href="/about"><i class="fas fa-info"></i> About</a>
-            </div>
-        </nav>
-        {% block header %}
-        {% endblock %}
-    </header>
     <section>
         <div class="container">
         {% block content %}
@@ -43,13 +29,6 @@
         {% endblock %}
         </div>
     </section>
-    <footer>
-      <div class="container">
-        {% block footer %}
-        
-        {% endblock %}
-      </div>
-    </footer>
     {% block js %}
     {% endblock %}
     

@@ -18,9 +18,9 @@ function STLViewer(object, id) {
 
   scene.add( camera );
 
-  //var grid = new THREE.GridHelper( 25, 50, 0xffffff, 0x555555 );
-  //grid.rotateOnAxis( new THREE.Vector3( 1, 0, 0 ), 90 * ( Math.PI/180 ) );
-  //scene.add( grid ); 
+  var grid = new THREE.GridHelper( 25, 50, 0xffffff, 0x555555 );
+  grid.rotateOnAxis( new THREE.Vector3( 1, 0, 0 ), 90 * ( Math.PI/180 ) );
+  scene.add( grid ); 
 
   renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
   //renderer.setClearColor( 0x999999 );
@@ -36,7 +36,7 @@ function STLViewer(object, id) {
   loader.load(object, function ( geometry ) {
     var mesh = new THREE.Mesh( geometry, material );
 
-    mesh.position.set( 0, 0, 0 );
+    mesh.position.set( 0, 0, 1 );
     mesh.rotation.set( 0, 0, 0 );
     mesh.scale.set( .07, .07, .07 );
 
@@ -47,9 +47,10 @@ function STLViewer(object, id) {
    
     var middle = new THREE.Vector3();
     geometry.center(middle);
-    mesh.position.x = -1 * middle.x;
-    mesh.position.y = -1 * middle.y;
-    mesh.position.z = -1 * middle.z;
+    // mesh.position.x = -1 * middle.x;
+    // mesh.position.y = -1 * middle.y;
+    // mesh.position.z = -1 * middle.z;
+    mesh.position.z = 0;
 
     camera.position = mesh.position;
     render();
